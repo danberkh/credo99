@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credo99 | Record Label</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Credo99</a>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#lanzamientos">Lanzamientos</a></li>
+                    <li><a href="#artistas">Artistas</a></li>
+                    <li><a href="#demo">Demo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container" style="position: relative; z-index: 1;">
+                <h1
+                    style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    Credo99</h1>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">The Future of Sound</h2>
+                <p>Credo99 is a forward-thinking record label dedicated to pure sonic innovation and artistic freedom.
+                </p>
+                <div class="hero-actions">
+                    <a href="#lanzamientos" class="btn btn-primary">Discover Music</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="lanzamientos">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Featured Releases</h2>
+                    <p>Experience our latest acoustic experiments.</p>
+                </div>
+                <div class="grid">
+                    <div class="release-card glass">
+                        <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=500&h=500&fit=crop"
+                            alt="Neon Pulse">
+                        <h3>Neon Pulse</h3>
+                        <p>Ethera • Techno</p>
+                    </div>
+                    <div class="release-card glass">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&h=500&fit=crop"
+                            alt="Subzero">
+                        <h3>Subzero</h3>
+                        <p>Void Walker • Deep House</p>
+                    </div>
+                    <div class="release-card glass">
+                        <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=500&h=500&fit=crop"
+                            alt="Ghost Machines">
+                        <h3>Ghost Machines</h3>
+                        <p>Syntax Error • Industrial</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="artistas">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Artists</h2>
+                    <p>The visionaries behind the Credo99 sound.</p>
+                </div>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="artist-card">
+                        <div class="artist-img">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&h=300&fit=crop"
+                                alt="Ethera">
+                        </div>
+                        <h3>Ethera</h3>
+                        <p>Sound Scaper</p>
+                    </div>
+                    <div class="artist-card">
+                        <div class="artist-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop"
+                                alt="Void Walker">
+                        </div>
+                        <h3>Void Walker</h3>
+                        <p>Rhythm Architect</p>
+                    </div>
+                    <div class="artist-card">
+                        <div class="artist-img">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop"
+                                alt="Syntax Error">
+                        </div>
+                        <h3>Syntax Error</h3>
+                        <p>Synth Master</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="glass" style="margin: 0 2rem; border-radius: 40px;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Submit Demo</h2>
+                    <p>We are always looking for new talent. Send us your sound.</p>
+                </div>
+                <form class="demo-form">
+                    <div class="form-group">
+                        <label>Artist Name</label>
+                        <input type="text" placeholder="Your moniker">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="how-to-reach-you@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>SoundCloud / Dropbox Link</label>
+                        <input type="url" placeholder="Paste your link here">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="Tell us about yourself"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" style="width: 100%;">Submit Sound</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Credo99 Records. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
