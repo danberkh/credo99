@@ -5,22 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credo99 | Record Label</title>
+    <meta name="description"
+        content="Credo99 is a forward-thinking record label dedicated to sonic innovation and artistic freedom.">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
+
+    <!-- ======== HEADER ======== -->
+    <header id="site-header">
         <div class="container">
             <nav>
-                <a href="#" class="logo">Credo99</a>
+                <a href="#" class="logo">Credo<span>99</span></a>
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#lanzamientos">Lanzamientos</a></li>
+                    <li><a href="#escuchar">Escuchar</a></li>
                     <li><a href="#artistas">Artistas</a></li>
                     <li><a href="#demo">Demo</a></li>
                 </ul>
@@ -29,57 +36,105 @@
     </header>
 
     <main>
-        <section id="inicio" class="hero">
-            <div class="container" style="position: relative; z-index: 1;">
-                <h1
-                    style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                    Credo99</h1>
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">The Future of Sound</h2>
-                <p>Credo99 is a forward-thinking record label dedicated to pure sonic innovation and artistic freedom.
+
+        <!-- ======== HERO ======== -->
+        <section id="inicio" class="hero container">
+
+            <div class="hero-text">
+                <span class="hero-eyebrow">Record Label · Est. 2020</span>
+                <h1>The sound<br>you want to<br><em>be heard.</em></h1>
+                <p class="hero-sub">
+                    Credo99 is a forward-thinking record label built on pure sonic innovation and total artistic
+                    freedom.
                 </p>
                 <div class="hero-actions">
                     <a href="#lanzamientos" class="btn btn-primary">Discover Music</a>
+                    <a href="#demo" class="btn btn-outline">Submit Demo</a>
                 </div>
             </div>
+
+            <div class="hero-visual">
+                <div class="blob-wrap">
+                    <div class="blob-main">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=700&fit=crop&crop=top"
+                            alt="Artist in studio">
+                    </div>
+                    <div class="blob-deco blob-deco-1"></div>
+                    <div class="blob-deco blob-deco-2"></div>
+                </div>
+            </div>
+
         </section>
 
+        <!-- ======== RELEASES ======== -->
         <section id="lanzamientos">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title centered reveal">
+                    <span class="section-label">Releases</span>
                     <h2>Featured Releases</h2>
                     <p>Experience our latest acoustic experiments.</p>
                 </div>
-                <div class="grid">
-                    <div class="release-card glass">
+                <div class="releases-grid">
+                    <div class="release-card reveal">
+                        <span class="release-tag">Techno</span>
                         <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=500&h=500&fit=crop"
                             alt="Neon Pulse">
-                        <h3>Neon Pulse</h3>
-                        <p>Ethera • Techno</p>
+                        <div class="release-card-body">
+                            <h3>Neon Pulse</h3>
+                            <p>Ethera · 2025</p>
+                        </div>
                     </div>
-                    <div class="release-card glass">
+                    <div class="release-card reveal">
+                        <span class="release-tag">Deep House</span>
                         <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&h=500&fit=crop"
                             alt="Subzero">
-                        <h3>Subzero</h3>
-                        <p>Void Walker • Deep House</p>
+                        <div class="release-card-body">
+                            <h3>Subzero</h3>
+                            <p>Void Walker · 2025</p>
+                        </div>
                     </div>
-                    <div class="release-card glass">
+                    <div class="release-card reveal">
+                        <span class="release-tag">Industrial</span>
                         <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=500&h=500&fit=crop"
                             alt="Ghost Machines">
-                        <h3>Ghost Machines</h3>
-                        <p>Syntax Error • Industrial</p>
+                        <div class="release-card-body">
+                            <h3>Ghost Machines</h3>
+                            <p>Syntax Error · 2026</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ======== SPOTIFY PLAYER ======== -->
+        <section id="escuchar">
+            <div class="container">
+                <div class="section-title centered reveal">
+                    <span class="section-label">Streaming</span>
+                    <h2>Listen on Spotify</h2>
+                    <p>Stream our full catalogue directly from the label.</p>
+                </div>
+                <div class="spotify-player-wrap reveal">
+                    <iframe id="spotify-artist-embed"
+                        src="https://open.spotify.com/embed/artist/2xKukGVYxkYkeCOYrOj8rY?utm_source=generator&theme=0"
+                        width="100%" height="450" frameborder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" title="Credo99 on Spotify">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== ARTISTS ======== -->
         <section id="artistas">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title centered reveal">
+                    <span class="section-label">Roster</span>
                     <h2>Our Artists</h2>
                     <p>The visionaries behind the Credo99 sound.</p>
                 </div>
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                    <div class="artist-card">
+                <div class="artists-grid">
+                    <div class="artist-card reveal">
                         <div class="artist-img">
                             <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&h=300&fit=crop"
                                 alt="Ethera">
@@ -87,7 +142,7 @@
                         <h3>Ethera</h3>
                         <p>Sound Scaper</p>
                     </div>
-                    <div class="artist-card">
+                    <div class="artist-card reveal">
                         <div class="artist-img">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop"
                                 alt="Void Walker">
@@ -95,7 +150,7 @@
                         <h3>Void Walker</h3>
                         <p>Rhythm Architect</p>
                     </div>
-                    <div class="artist-card">
+                    <div class="artist-card reveal">
                         <div class="artist-img">
                             <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop"
                                 alt="Syntax Error">
@@ -107,38 +162,45 @@
             </div>
         </section>
 
-        <section id="demo" class="glass" style="margin: 0 2rem; border-radius: 40px;">
+        <!-- ======== DEMO FORM ======== -->
+        <section id="demo">
             <div class="container">
-                <div class="section-title">
-                    <h2>Submit Demo</h2>
-                    <p>We are always looking for new talent. Send us your sound.</p>
+                <div class="demo-inner">
+                    <div class="demo-copy reveal">
+                        <span class="section-label">Open Submissions</span>
+                        <h2>Submit<br>Your Sound.</h2>
+                        <p>We are always searching for new voices. If your music pushes boundaries, we want to hear it.
+                        </p>
+                    </div>
+                    <form class="demo-form reveal" onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="artist-name">Artist Name</label>
+                            <input id="artist-name" type="text" placeholder="Your moniker">
+                        </div>
+                        <div class="form-group">
+                            <label for="artist-email">Email Address</label>
+                            <input id="artist-email" type="email" placeholder="you@artists.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="artist-link">SoundCloud / Dropbox Link</label>
+                            <input id="artist-link" type="url" placeholder="Paste your link here">
+                        </div>
+                        <div class="form-group">
+                            <label for="artist-message">Message</label>
+                            <textarea id="artist-message" rows="4" placeholder="Tell us about yourself"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Submit Sound</button>
+                    </form>
                 </div>
-                <form class="demo-form">
-                    <div class="form-group">
-                        <label>Artist Name</label>
-                        <input type="text" placeholder="Your moniker">
-                    </div>
-                    <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" placeholder="how-to-reach-you@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label>SoundCloud / Dropbox Link</label>
-                        <input type="url" placeholder="Paste your link here">
-                    </div>
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea rows="4" placeholder="Tell us about yourself"></textarea>
-                    </div>
-                    <button type="button" class="btn btn-primary" style="width: 100%;">Submit Sound</button>
-                </form>
             </div>
         </section>
+
     </main>
 
+    <!-- ======== FOOTER ======== -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Credo99 Records. All rights reserved.</p>
+            <p><strong>Credo99</strong> &copy; 2026 Records. All rights reserved.</p>
         </div>
     </footer>
 
