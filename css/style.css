@@ -5,19 +5,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-    --bg: #f2efe8;
-    /* warm cream */
-    --bg-card: #e8e4da;
-    --fg: #1a2a1e;
-    /* deep forest */
-    --fg-dim: #4a5e4e;
-    --accent: #1a4d2e;
-    /* dark green */
-    --accent-light: #d0e8c5;
-    /* mint */
-    --pill-bg: #1a4d2e;
-    --pill-text: #f2efe8;
-    --border: rgba(26, 42, 30, 0.12);
+    --bg: #0a0a0a;
+    /* negro profundo */
+    --bg-card: #141414;
+    --fg: #f0f0f0;
+    /* blanco roto */
+    --fg-dim: #888;
+    --accent: #39ff14;
+    /* verde eléctrico / neon */
+    --accent-light: rgba(57, 255, 20, 0.12);
+    --pill-bg: #39ff14;
+    --pill-text: #0a0a0a;
+    --border: rgba(255, 255, 255, 0.08);
     --radius-xl: 40px;
     --radius-pill: 100px;
     --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -63,7 +62,7 @@ header {
 }
 
 header.scrolled {
-    background: rgba(242, 239, 232, 0.9);
+    background: rgba(10, 10, 10, 0.92);
     backdrop-filter: blur(14px);
     padding: 1rem 0;
     border-bottom: 1px solid var(--border);
@@ -114,8 +113,8 @@ nav {
 
 .nav-links a.active,
 .nav-links li:last-child a {
-    background: var(--accent-light);
-    color: var(--accent);
+    background: var(--accent);
+    color: #0a0a0a;
     font-weight: 600;
 }
 
@@ -134,32 +133,7 @@ nav {
     overflow: hidden;
 }
 
-/* Organic background blobs */
-.hero::before,
-.hero::after {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.45;
-}
-
-.hero::before {
-    width: 500px;
-    height: 500px;
-    background: var(--accent-light);
-    top: -100px;
-    right: -100px;
-}
-
-.hero::after {
-    width: 350px;
-    height: 350px;
-    background: #c2dbb5;
-    bottom: -80px;
-    left: 10%;
-}
+/* No background blobs — dark/clean look */
 
 .hero-text {
     position: relative;
@@ -176,6 +150,7 @@ nav {
     margin-bottom: 1.5rem;
     padding: 0.4rem 1rem;
     background: var(--accent-light);
+    border: 1px solid rgba(57, 255, 20, 0.35);
     border-radius: var(--radius-pill);
 }
 
@@ -277,27 +252,9 @@ nav {
     object-position: top center;
 }
 
+/* blob-deco removidos — diseño más limpio y oscuro */
 .blob-deco {
-    position: absolute;
-    border-radius: 50%;
-    background: var(--accent-light);
-}
-
-.blob-deco-1 {
-    width: 120px;
-    height: 120px;
-    bottom: -20px;
-    left: -30px;
-    background: var(--accent-light);
-}
-
-.blob-deco-2 {
-    width: 70px;
-    height: 70px;
-    top: 30px;
-    right: -20px;
-    background: #fff9e6;
-    border: 3px solid var(--accent-light);
+    display: none;
 }
 
 @keyframes morphBlob {
@@ -379,8 +336,8 @@ section {
 
 .release-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(26, 42, 30, 0.12);
-    border-color: rgba(26, 77, 46, 0.2);
+    box-shadow: 0 20px 50px rgba(57, 255, 20, 0.1);
+    border-color: rgba(57, 255, 20, 0.3);
 }
 
 .release-card img {
@@ -417,8 +374,8 @@ section {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: var(--accent-light);
-    color: var(--accent);
+    background: var(--accent);
+    color: #0a0a0a;
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.3rem 0.8rem;
@@ -557,15 +514,15 @@ section {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--accent);
-    background: #fff;
-    box-shadow: 0 0 0 4px rgba(26, 77, 46, 0.08);
+    background: #1a1a1a;
+    box-shadow: 0 0 0 4px rgba(57, 255, 20, 0.08);
 }
 
 /* ============================================
    SPOTIFY PLAYER
    ============================================ */
 #escuchar {
-    background: var(--bg-card);
+    background: var(--bg);
 }
 
 .spotify-player-wrap {
@@ -573,7 +530,7 @@ section {
     margin: 0 auto;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(26, 42, 30, 0.12);
+    box-shadow: 0 20px 60px rgba(57, 255, 20, 0.08);
     border: 1px solid var(--border);
 }
 
@@ -587,15 +544,15 @@ section {
    FOOTER
    ============================================ */
 footer {
-    background: var(--fg);
-    color: rgba(242, 239, 232, 0.5);
+    background: #050505;
+    color: rgba(255, 255, 255, 0.35);
     padding: 3rem 0;
     text-align: center;
     font-size: 0.9rem;
 }
 
 footer strong {
-    color: var(--bg);
+    color: var(--accent);
 }
 
 /* ============================================
