@@ -21,49 +21,41 @@
 
     <!-- ======== HEADER ======== -->
     <header id="site-header">
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">Credo<span>99</span></a>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#lanzamientos">Lanzamientos</a></li>
-                    <li><a href="#escuchar">Escuchar</a></li>
-                    <li><a href="#artistas">Artistas</a></li>
-                    <li><a href="#fechas">Fechas</a></li>
-                </ul>
-            </nav>
+        <div class="nav-left">
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#lanzamientos">Lanzamientos</a></li>
+                <li><a href="#escuchar">Escuchar</a></li>
+            </ul>
+        </div>
+        <a href="#" class="logo">Credo<span>99</span></a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#artistas">Artistas</a></li>
+                <li><a href="#fechas">Fechas</a></li>
+            </ul>
         </div>
     </header>
 
     <main>
 
         <!-- ======== HERO ======== -->
-        <section id="inicio" class="hero container">
-
-            <div class="hero-text">
+        <section id="inicio" class="hero">
+            <div class="hero-bg">
+                <img src="assets/img/portada_1.jpeg" alt="Portada Credo99">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content container">
                 <span class="hero-eyebrow">Record Label · Est. 2020</span>
                 <h1>The sound<br>you want to<br><em>be heard.</em></h1>
-                <p class="hero-sub">
-                    Credo99 is a forward-thinking record label built on pure sonic innovation and total artistic
-                    freedom.
-                </p>
                 <div class="hero-actions">
                     <a href="#lanzamientos" class="btn btn-primary">Discover Music</a>
-                    <a href="#demo" class="btn btn-outline">Submit Demo</a>
                 </div>
             </div>
-
-            <div class="hero-visual">
-                <div class="blob-wrap">
-                    <div class="blob-main">
-                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=700&fit=crop&crop=top"
-                            alt="Artist in studio">
-                    </div>
-                    <div class="blob-deco blob-deco-1"></div>
-                    <div class="blob-deco blob-deco-2"></div>
-                </div>
+            <div class="hero-scroll-hint">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
             </div>
-
         </section>
 
         <!-- ======== RELEASES ======== -->
@@ -162,38 +154,6 @@
             </div>
         </section>
 
-        <!-- ======== DEMO FORM ======== -->
-        <section id="demo">
-            <div class="container">
-                <div class="demo-inner">
-                    <div class="demo-copy reveal">
-                        <span class="section-label">Open Submissions</span>
-                        <h2>Submit<br>Your Sound.</h2>
-                        <p>We are always searching for new voices. If your music pushes boundaries, we want to hear it.
-                        </p>
-                    </div>
-                    <form class="demo-form reveal" onsubmit="return false;">
-                        <div class="form-group">
-                            <label for="artist-name">Artist Name</label>
-                            <input id="artist-name" type="text" placeholder="Your moniker">
-                        </div>
-                        <div class="form-group">
-                            <label for="artist-email">Email Address</label>
-                            <input id="artist-email" type="email" placeholder="you@artists.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="artist-link">SoundCloud / Dropbox Link</label>
-                            <input id="artist-link" type="url" placeholder="Paste your link here">
-                        </div>
-                        <div class="form-group">
-                            <label for="artist-message">Message</label>
-                            <textarea id="artist-message" rows="4" placeholder="Tell us about yourself"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width:100%;">Submit Sound</button>
-                    </form>
-                </div>
-            </div>
-        </section>
 
     </main>
 
