@@ -5,6 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root {
+    --bg-outer-center: #4A3426; /* Color mas claro en el centro */
+    --bg-outer-edge: #0A0604;   /* Color muy oscuro en los bordes */
+    --bg-outer: #251810;        /* Color calculado para el top-center donde esta el notch */
     --bg: #0a0a0a;
     /* negro profundo */
     --bg-card: #141414;
@@ -36,11 +39,32 @@ html {
 }
 
 body {
-    background-color: var(--bg);
+    background: radial-gradient(circle at 50% 50%, var(--bg-outer-center) 0%, var(--bg-outer-edge) 100%);
+    background-attachment: fixed;
     color: var(--fg);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    overflow: hidden;
+    padding: 1rem;
+    height: 100vh;
+}
+
+.app-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.app-inner {
+    background-color: var(--bg);
+    border-radius: 32px;
+    overflow-y: auto;
     overflow-x: hidden;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
 
 .container {
@@ -50,29 +74,66 @@ body {
 }
 
 /* ============================================
-   HEADER / NAV — centered logo style
+   HEADER / NAV — Notch Style
    ============================================ */
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.75rem 3rem;
+    padding: 1.5rem 3rem;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    pointer-events: none;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header.hidden {
+    transform: translateY(-100px);
+}
+
+header > * {
+    pointer-events: auto;
+}
+
+.notch-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bg-outer);
+    height: 64px;
+    padding: 0 2rem;
+    border-radius: 0 0 24px 24px;
+    display: flex;
     align-items: center;
-    transition: var(--transition);
 }
 
-header.scrolled {
-    background: rgba(10, 10, 10, 0.92);
-    backdrop-filter: blur(14px);
-    padding: 1rem 3rem;
-    border-bottom: 1px solid var(--border);
+.notch-container::before,
+.notch-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background: transparent;
 }
 
-.nav-left,
-.nav-right {
+.notch-container::before {
+    left: -24px;
+    border-top-right-radius: 24px;
+    box-shadow: 12px -12px 0 12px var(--bg-outer);
+}
+
+.notch-container::after {
+    right: -24px;
+    border-top-left-radius: 24px;
+    box-shadow: -12px -12px 0 12px var(--bg-outer);
+}
+
+.notch {
     display: flex;
     align-items: center;
 }
@@ -80,36 +141,21 @@ header.scrolled {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 1rem;
     list-style: none;
 }
 
 .nav-links a {
-    color: rgba(240, 240, 240, 0.65);
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 0.82rem;
+    font-size: 0.9rem;
     font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 0.45rem 1rem;
-    border-radius: var(--radius-pill);
+    padding: 0.45rem 0.5rem;
     transition: var(--transition);
 }
 
 .nav-links a:hover {
     color: #fff;
-}
-
-.nav-links a.nav-cta {
-    background: var(--accent);
-    color: #0a0a0a;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-}
-
-.nav-links a.nav-cta:hover {
-    background: #fff;
-    color: #0a0a0a;
 }
 
 .logo {
@@ -120,11 +166,46 @@ header.scrolled {
     text-decoration: none;
     letter-spacing: -0.5px;
     flex-shrink: 0;
-    margin: 0 2rem;
 }
 
 .logo span {
     color: var(--accent);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.sign-in-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.sign-in-link:hover {
+    color: #fff;
+}
+
+.hamburger-btn {
+    background: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #000;
+    transition: var(--transition);
+}
+
+.hamburger-btn:hover {
+    transform: scale(1.05);
 }
 
 /* ============================================

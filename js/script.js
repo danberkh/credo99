@@ -8,17 +8,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Header scroll effect
+// Header scroll effect (Hide notch after hero section)
 const header = document.getElementById('site-header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-}, { passive: true });
+const appInner = document.querySelector('.app-inner');
+const hero = document.getElementById('inicio');
 
-// Scroll reveal with IntersectionObserver
+if (appInner && header && hero) {
+    appInner.addEventListener('scroll', () => {
+        // Hide header if we scrolled past the hero section
+        if (appInner.scrollTop > hero.offsetHeight - 100) {
+            header.classList.add('hidden');
+        } else {
+            header.classList.remove('hidden');
+        }
+    }, { passive: true });
+}
+
+// Update intersection observer to work within app-inner context
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

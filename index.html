@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credo99 | Record Label</title>
-    <meta name="description"
-        content="Credo99 is a forward-thinking record label dedicated to sonic innovation and artistic freedom.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,150 +18,145 @@
 
 <body>
 
-    <!-- ======== HEADER ======== -->
-    <header id="site-header">
-        <div class="nav-left">
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#lanzamientos">Lanzamientos</a></li>
-                <li><a href="#escuchar">Escuchar</a></li>
-            </ul>
+    <div class="app-wrapper">
+        <!-- ======== HEADER ======== -->
+        <header id="site-header">
+            <div class="notch-container">
+                <div class="notch">
+                    <ul class="nav-links">
+                        <li><a href="#lanzamientos">Albumes</a></li>
+                        <li><a href="#escuchar">Escuchar</a></li>
+                        <li><a href="#artistas">Novedades</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="app-inner">
+
+            <main>
+
+                <!-- ======== HERO ======== -->
+                <section id="inicio" class="hero">
+                    <div class="hero-bg">
+                        <img src="assets/img/portada_1.jpeg" alt="Portada Credo99">
+                        <div class="hero-overlay"></div>
+                    </div>
+                    <div class="hero-content container">
+                    </div>
+                    <div class="hero-scroll-hint">
+                        <span>Scroll</span>
+                        <div class="scroll-line"></div>
+                    </div>
+                </section>
+
+                <!-- ======== RELEASES ======== -->
+                <section id="lanzamientos">
+                    <div class="container">
+                        <div class="section-title centered reveal">
+                            <span class="section-label">Releases</span>
+                            <h2>Featured Releases</h2>
+                            <p>Experience our latest acoustic experiments.</p>
+                        </div>
+                        <div class="releases-grid">
+                            <div class="release-card reveal">
+                                <span class="release-tag">Techno</span>
+                                <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=500&h=500&fit=crop"
+                                    alt="Neon Pulse">
+                                <div class="release-card-body">
+                                    <h3>Neon Pulse</h3>
+                                    <p>Ethera · 2025</p>
+                                </div>
+                            </div>
+                            <div class="release-card reveal">
+                                <span class="release-tag">Deep House</span>
+                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&h=500&fit=crop"
+                                    alt="Subzero">
+                                <div class="release-card-body">
+                                    <h3>Subzero</h3>
+                                    <p>Void Walker · 2025</p>
+                                </div>
+                            </div>
+                            <div class="release-card reveal">
+                                <span class="release-tag">Industrial</span>
+                                <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=500&h=500&fit=crop"
+                                    alt="Ghost Machines">
+                                <div class="release-card-body">
+                                    <h3>Ghost Machines</h3>
+                                    <p>Syntax Error · 2026</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ======== SPOTIFY PLAYER ======== -->
+                <section id="escuchar">
+                    <div class="container">
+                        <div class="section-title centered reveal">
+                            <span class="section-label">Streaming</span>
+                            <h2>Listen on Spotify</h2>
+                            <p>Stream our full catalogue directly from the label.</p>
+                        </div>
+                        <div class="spotify-player-wrap reveal">
+                            <iframe id="spotify-artist-embed"
+                                src="https://open.spotify.com/embed/artist/2xKukGVYxkYkeCOYrOj8rY?utm_source=generator&theme=0"
+                                width="100%" height="450" frameborder="0"
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy" title="Credo99 on Spotify">
+                            </iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ======== ARTISTS ======== -->
+                <section id="artistas">
+                    <div class="container">
+                        <div class="section-title centered reveal">
+                            <span class="section-label">Roster</span>
+                            <h2>Our Artists</h2>
+                            <p>The visionaries behind the Credo99 sound.</p>
+                        </div>
+                        <div class="artists-grid">
+                            <div class="artist-card reveal">
+                                <div class="artist-img">
+                                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&h=300&fit=crop"
+                                        alt="Ethera">
+                                </div>
+                                <h3>Ethera</h3>
+                                <p>Sound Scaper</p>
+                            </div>
+                            <div class="artist-card reveal">
+                                <div class="artist-img">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop"
+                                        alt="Void Walker">
+                                </div>
+                                <h3>Void Walker</h3>
+                                <p>Rhythm Architect</p>
+                            </div>
+                            <div class="artist-card reveal">
+                                <div class="artist-img">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop"
+                                        alt="Syntax Error">
+                                </div>
+                                <h3>Syntax Error</h3>
+                                <p>Synth Master</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </main>
+
+            <!-- ======== FOOTER ======== -->
+            <footer>
+                <div class="container">
+                    <p><strong>Credo99</strong> &copy; 2026 Records. All rights reserved.</p>
+                </div>
+            </footer>
         </div>
-        <a href="#" class="logo">Credo<span>99</span></a>
-        <div class="nav-right">
-            <ul class="nav-links">
-                <li><a href="#artistas">Artistas</a></li>
-                <li><a href="#fechas">Fechas</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <main>
-
-        <!-- ======== HERO ======== -->
-        <section id="inicio" class="hero">
-            <div class="hero-bg">
-                <img src="assets/img/portada_1.jpeg" alt="Portada Credo99">
-                <div class="hero-overlay"></div>
-            </div>
-            <div class="hero-content container">
-                <span class="hero-eyebrow">Record Label · Est. 2020</span>
-                <h1>The sound<br>you want to<br><em>be heard.</em></h1>
-                <div class="hero-actions">
-                    <a href="#lanzamientos" class="btn btn-primary">Discover Music</a>
-                </div>
-            </div>
-            <div class="hero-scroll-hint">
-                <span>Scroll</span>
-                <div class="scroll-line"></div>
-            </div>
-        </section>
-
-        <!-- ======== RELEASES ======== -->
-        <section id="lanzamientos">
-            <div class="container">
-                <div class="section-title centered reveal">
-                    <span class="section-label">Releases</span>
-                    <h2>Featured Releases</h2>
-                    <p>Experience our latest acoustic experiments.</p>
-                </div>
-                <div class="releases-grid">
-                    <div class="release-card reveal">
-                        <span class="release-tag">Techno</span>
-                        <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=500&h=500&fit=crop"
-                            alt="Neon Pulse">
-                        <div class="release-card-body">
-                            <h3>Neon Pulse</h3>
-                            <p>Ethera · 2025</p>
-                        </div>
-                    </div>
-                    <div class="release-card reveal">
-                        <span class="release-tag">Deep House</span>
-                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&h=500&fit=crop"
-                            alt="Subzero">
-                        <div class="release-card-body">
-                            <h3>Subzero</h3>
-                            <p>Void Walker · 2025</p>
-                        </div>
-                    </div>
-                    <div class="release-card reveal">
-                        <span class="release-tag">Industrial</span>
-                        <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=500&h=500&fit=crop"
-                            alt="Ghost Machines">
-                        <div class="release-card-body">
-                            <h3>Ghost Machines</h3>
-                            <p>Syntax Error · 2026</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======== SPOTIFY PLAYER ======== -->
-        <section id="escuchar">
-            <div class="container">
-                <div class="section-title centered reveal">
-                    <span class="section-label">Streaming</span>
-                    <h2>Listen on Spotify</h2>
-                    <p>Stream our full catalogue directly from the label.</p>
-                </div>
-                <div class="spotify-player-wrap reveal">
-                    <iframe id="spotify-artist-embed"
-                        src="https://open.spotify.com/embed/artist/2xKukGVYxkYkeCOYrOj8rY?utm_source=generator&theme=0"
-                        width="100%" height="450" frameborder="0"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy" title="Credo99 on Spotify">
-                    </iframe>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======== ARTISTS ======== -->
-        <section id="artistas">
-            <div class="container">
-                <div class="section-title centered reveal">
-                    <span class="section-label">Roster</span>
-                    <h2>Our Artists</h2>
-                    <p>The visionaries behind the Credo99 sound.</p>
-                </div>
-                <div class="artists-grid">
-                    <div class="artist-card reveal">
-                        <div class="artist-img">
-                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&h=300&fit=crop"
-                                alt="Ethera">
-                        </div>
-                        <h3>Ethera</h3>
-                        <p>Sound Scaper</p>
-                    </div>
-                    <div class="artist-card reveal">
-                        <div class="artist-img">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop"
-                                alt="Void Walker">
-                        </div>
-                        <h3>Void Walker</h3>
-                        <p>Rhythm Architect</p>
-                    </div>
-                    <div class="artist-card reveal">
-                        <div class="artist-img">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop"
-                                alt="Syntax Error">
-                        </div>
-                        <h3>Syntax Error</h3>
-                        <p>Synth Master</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-    </main>
-
-    <!-- ======== FOOTER ======== -->
-    <footer>
-        <div class="container">
-            <p><strong>Credo99</strong> &copy; 2026 Records. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
